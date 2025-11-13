@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="Blood Bank"
+        android:theme="@style/Theme.AndroidProjectBloodBank"
+        tools:targetApi="31">
+
+        <!-- 🩸 Splash Screen (Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 🔑 Login Screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- 📝 Register Screen -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- 🏠 Receiver Home Screen -->
+        <activity
+            android:name=".ReceiverHomeActivity"
+            android:exported="true" />
+
+        <!-- 🏠 Donor Home Screen -->
+        <activity
+            android:name=".DonorHomeActivity"
+            android:exported="true" />
+
+        <activity android:name=".NearbyDonorsActivity"/>
+        <activity android:name=".FindBloodBanksActivity"/>
+        <activity android:name=".FindHospitalsActivity"/>
+        <activity android:name=".RequestsActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".NotificationsActivity"
+            android:label="Notifications"
+            android:exported="true" />
+
+
+        <activity android:name=".DonorNotificationsActivity"/>
+        <activity android:name=".DonorAvailableRequestsActivity"/>
+        <activity android:name=".DonorFindCentersActivity"/>
+        <activity android:name=".DonorFindHospitalsActivity"/>
+        <activity android:name=".DonorMyDonationsActivity"/>
+        <activity android:name=".DonorProfileActivity" />
+
+
+
+    </application>
+
+</manifest>

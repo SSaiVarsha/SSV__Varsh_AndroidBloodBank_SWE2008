@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Logo at the top, centered -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="234dp"
+        android:layout_height="184dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/bloodbank_logo"
+        android:contentDescription="Blood Bank Logo" />
+
+    <!-- Location Spinner below logo -->
+    <Spinner
+        android:id="@+id/spinnerLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginTop="24dp"
+        android:prompt="@string/select_location" />
+
+    <!-- Show Hospitals Button below spinner -->
+    <Button
+        android:id="@+id/btnSearchHospitals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Hospitals"
+        android:layout_below="@id/spinnerLocation"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#388E3C"
+        android:textColor="#FFFFFF" />
+
+    <!-- Contact via JustDial Button below previous button -->
+    <Button
+        android:id="@+id/btnContactJustDialHospitals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact via JustDial"
+        android:layout_below="@id/btnSearchHospitals"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1976D2"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

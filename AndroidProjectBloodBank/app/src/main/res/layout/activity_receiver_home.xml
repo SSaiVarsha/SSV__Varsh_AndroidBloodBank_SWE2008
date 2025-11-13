@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ReceiverHomeActivity">
+
+    <!-- ======= MAIN CONTENT ======= -->
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_above="@+id/bottomNav">
+
+        <!-- ======= TOP BAR ======= -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/tvWelcomeReceiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Welcome Receiver!"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <!-- Notification Button -->
+            <LinearLayout
+                android:id="@+id/notificationLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnNotification"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_notifications"
+                    android:contentDescription="Notifications"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <Button
+                    android:id="@+id/btnNotificationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textColor="#4E342E"
+                    android:textSize="10sp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Spacer -->
+
+        <!-- Logo Image -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="235dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="centerInside"
+            android:src="@drawable/bloodbank_logo" />
+
+        <!-- Spacer -->
+
+        <!-- Nearby Donors Button -->
+        <LinearLayout
+            android:id="@+id/btnNearbyDonorsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="82dp"
+                android:contentDescription="Nearby Donor Icon"
+                android:src="@drawable/ic_nearby" />
+
+            <Button
+                android:id="@+id/btnNearbyDonors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Nearby Donors"
+                android:textColor="#4E342E"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+
+        <!-- Blood Banks and Hospitals Buttons Side by Side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <!-- Find Blood Banks -->
+            <LinearLayout
+                android:id="@+id/btnFindBloodBanksLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="4dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="63dp"
+                    android:contentDescription="Blood Bank Icon"
+                    android:src="@drawable/ic_blood_bank" />
+
+                <Button
+                    android:id="@+id/btnFindBloodBanks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Find Blood Banks"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+
+            <!-- Find Hospitals -->
+            <LinearLayout
+                android:id="@+id/btnFindHospitalsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="67dp"
+                    android:contentDescription="Hospital Icon"
+                    android:src="@drawable/ic_hospital" />
+
+                <Button
+                    android:id="@+id/btnFindHospitals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Find Hospitals"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ======= BOTTOM NAVIGATION BAR ======= -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F5F5"
+        android:padding="10dp"
+        android:weightSum="4">
+
+        <!-- Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_home"
+                android:tint="#D32F2F" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+
+        <!-- Find Donor -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="29dp"
+                android:src="@drawable/ic_find" />
+
+            <Button
+                android:id="@+id/btnFindDonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find Donor"
+                android:textColor="#4E342E"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+
+        <!-- Requests -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_requests" />
+
+            <Button
+                android:id="@+id/btnRequests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requests"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#4E342E"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_profile" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#4E342E"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
